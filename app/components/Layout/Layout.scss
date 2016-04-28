@@ -1,0 +1,39 @@
+// --
+// Styles for the Layout-component.
+// --
+
+@import "./../../client.scss";
+
+body
+, html {
+    font-family: $font-roboto;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-body;
+    line-height: $font-size-body * 1.5;
+    color: $font-color;
+}
+
+body
+, html
+, #app
+, #app > div {
+    height: 100%;
+    width: 100%
+}
+
+#app > div {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    overflow: auto;
+    @media (max-width: 316px) {
+        padding-top: 110px;
+    }
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: auto;
+}
+

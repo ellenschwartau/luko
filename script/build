@@ -1,0 +1,7 @@
+# --
+# Builds the Docker image for the web-app.
+# --
+
+#!/bin/bash -e
+image_tag="${PWD##*/}:latest"
+docker build --tag $image_tag .

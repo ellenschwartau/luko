@@ -1,0 +1,11 @@
+# --
+# Builds the Docker image and runs the container.
+# --
+
+#!/bin/bash -e
+image_tag="${PWD##*/}:latest"
+container_name="${PWD##*/}"
+# Build the image
+./script/build
+# runs the image
+docker run -d -p 8080:8080 --name ${container_name} ${image_tag}

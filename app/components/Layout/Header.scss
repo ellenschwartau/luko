@@ -1,0 +1,26 @@
+// --
+// Styles for the header component.
+// --
+
+@import "./../../client.scss";
+
+#header {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 70px;
+    z-index: 1;
+
+    h1 {
+        font-weight: $font-weight-thin;
+        font-size: $font-size-big;
+        line-height: $line-height-big;
+    }
+
+    @media (max-width: 296px) {
+        height: 115px;
+    }
+}
