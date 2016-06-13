@@ -1,25 +1,17 @@
 var React = require('react');
 var express = require('express');
+var config = require('../config.js');
 var path = require('path'); // to support relative paths
-var RequestService = require('../app/services/RequestService.js');
 
+var app = express();
 
-module.exports = function (config) {
+// access for static resources
+app.use(express.static('public'));
 
-    var app = express();
-
-    // access for static resources
-    app.use(express.static('public'));
-
-    // request statistical data for search and jobs
-    app.get("/statistics", (req, res) => {
-        RequestService.execute('get', config.statisticsProviderEndpoint, req.body, req.query, res);
-    })
-
-    // always render index.html - 404 will be handled clientside
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve('./app/index.html'));
-    });
-
-    return app;
-}
+// always render index.html - 404 will be handled clientside
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve('./app/index.html'));
+});
+app.listen(config.port, function() {
+    console.log('Listening at port %s ...', config.port);
+});
