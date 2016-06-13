@@ -1,0 +1,50 @@
+searchEndpoint: http://joboffer-searcher:8080/search
+statisticEndpoint: http://joboffer-searcher:8080/statistic
+jobAlertEndpoint: http://jobalert-subscriber:8080/jobalert
+
+# messaging configuration
+statisticsExchangeEnabled: false
+statisticsExchange: exchange.statistics-provider
+amqp:
+  hosts:
+    - name: rabbitmq
+      port: 5672
+  exchanges:
+    - name: exchange.statistics-provider
+      type: direct
+  queues:
+    - name: queue.statistics-provider
+  bindings:
+    - exchangeName: exchange.statistics-provider
+      queueName: queue.statistics-provider
+
+jerseyClient:
+  timeout: 5000ms
+
+server:
+  requestLog:
+    timeZone: UTC
+    appenders:
+      - type: console
+        threshold: ALL
+      - type: logstash-tcp
+        port: 9999
+        host: elk-logstash
+        threshold: ALL
+        queueSize: 8192
+        customFields:
+          origin: web-api
+          type: access
+
+logging:
+  appenders:
+    - type: console
+      threshold: ALL
+    - type: logstash-tcp
+      host: elk-logstash
+      port: 9999
+      queueSize: 8192
+      customFields:
+        origin: web-api
+        type: application
+
