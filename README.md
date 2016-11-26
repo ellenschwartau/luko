@@ -35,6 +35,7 @@ To build the container and run it use:
 The application will be available under `localhost:8080`.
 
 Or build an run the application without docker via: 
+
     npm run build
     npm run start
 
@@ -42,4 +43,5 @@ Or build an run the application without docker via:
 ## Tests
 
 To run the tests use:
+
     npm run test
