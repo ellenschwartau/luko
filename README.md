@@ -1,6 +1,6 @@
 # react-example-project
 
-Sample project that works with Docker, Nodejs, React, Fluxible, Webpack and Karma.
+Sample project that works uses Docker, Nodejs, React, Fluxible, Webpack and Karma with Jasmine.
 
 ## Project Structure
 
@@ -45,3 +45,5 @@ Or build an run the application without docker via:
 To run the tests use:
 
     npm run test
+
+This will start the tests in continuous mode.
