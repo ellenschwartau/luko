@@ -12,7 +12,7 @@ class Layout extends React.Component {
         // children-property will be set by react router
         return (
             <div>
-                <Header title="Lukas Faust Fotografie!"/>
+                <Header title="React Exmaple Project"/>
                 <div id="content">
                     {this.props.children}
                 </div>

@@ -9,7 +9,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div id="home">
-                Home
+                Extend this project for creating your own website based on Node and React.
             </div>
         );
     }
