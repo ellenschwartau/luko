@@ -13,9 +13,10 @@ RUN npm install --production
 
 # copy files
 ADD app/     app/
-ADD public/  public/
+ADD public/ public/
 ADD server/  server/
 ADD config.js config.js
+ADD index.html index.html
 
 # need CMD shell syntax for variable substitution
 CMD node server/app.js

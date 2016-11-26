@@ -1,21 +1,18 @@
 {
-  "name": "mini-frontend",
+  "name": "react-example-project",
   "version": "1.0.0",
-  "description": "frontend part of mini-microservices example",
+  "description": "react example project",
   "private": true,
   "engines": {
     "node": "5.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",
-    "chartist": "^0.9.7",
     "express": "^4.13.3",
     "react": "^0.14.8",
-    "react-chartist": "^0.10.1",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-router": "^v2.0.0",
-    "superagent": "^1.2.0"
+    "react-router": "^v2.0.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",

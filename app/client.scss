@@ -3,22 +3,7 @@
 // --
 
 // external stylesheets
-@import "../node_modules/chartist/dist/scss/chartist.scss";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
-
-// colors
-$primary-color: #00B8AF;
-$primary-color-light: #00B8AF;
-$background-color-dark: #033745;
-$background-color-overlay: rgba(3, 55, 69, .5);
-$background-color-lightgrey: #F9F9F9;
-$background-color-grey: #ECECEC;
-$black: #4A4A4A;
-$lightgrey: #F0F0F1;
-$grey: #B6B6B6;
-$darkgrey: #545455;
-$background-inputfields: #FAFAFA;
-$border-grey: #E8E8E8;
 
 //fonts
 $font-roboto: 'Roboto', sans-serif;
@@ -30,7 +15,7 @@ $font-size-big: 28px;
 $line-height-normal: 28px;
 $line-height-big: 40px;
 
-$font-color: #4A4A4A;
-$font-color-grey: #A3A3A3;
-$font-color-darkgrey: #6D6D6D;
-$font-color-primary: #00B8AF;
+$font-color: #4a4a4a;
+$font-color-grey: #a3a3a3;
+$font-color-darkgrey: #6d6d6d;
+$font-color-primary: #00b8af;
